@@ -1,24 +1,9 @@
-import { CAlert } from '@coreui/react';
+import React from "react"
+import {RouterProvider} from "react-router-dom"
+import {Router} from "./routes/root"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <CAlert color="secondary">Test</CAlert>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <RouterProvider router={Router} />
 }
 
-export default App;
+export default App
