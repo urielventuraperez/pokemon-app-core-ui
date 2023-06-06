@@ -11,4 +11,8 @@ export const Router = createBrowserRouter([
     path: "pokemon/:pokemonId",
     element: <Detail />,
   },
+  {
+    path: "*",
+    element: <Home />,
+  },
 ])
