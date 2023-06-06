@@ -1,8 +1,17 @@
+import {getLastSlashFromUrl} from "./getQueryParams"
+
 export const pokemonsFormat = (pokemonsList) =>
-  pokemonsList.map((pokemon, index) => {
+  pokemonsList.map((pokemon) => {
     let formatData = {}
-    formatData.id = index
+    formatData.id = getLastSlashFromUrl(pokemon.url)
     formatData.name = pokemon.name
-    formatData.image = `${process.env.REACT_APP_POKEPHOTOS}${index + 1}.svg`
+    formatData.image = `${process.env.REACT_APP_POKEPHOTOS}${getLastSlashFromUrl(
+      pokemon.url
+    )}.svg`
     return formatData
   })
+
+export const pokemonModePagination = {
+  PREVIOUS: "previous",
+  NEXT: "next",
+}

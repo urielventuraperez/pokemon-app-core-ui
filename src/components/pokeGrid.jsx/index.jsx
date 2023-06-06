@@ -4,7 +4,7 @@ import Card from "../../components/card"
 import Pagination from "../../components/pagination"
 import {CContainer, CRow, CCol} from "@coreui/react"
 
-const PokeGrid = ({data}) => {
+const PokeGrid = ({data, paginate, pagination}) => {
   return (
     <>
       <CContainer>
@@ -13,9 +13,9 @@ const PokeGrid = ({data}) => {
             <CCol key={item.id} xs={4}>
               <Card data={item} />
             </CCol>
-          ))}{" "}
+          ))}
         </CRow>
-        <Pagination />
+        <Pagination paginate={paginate} onClickPaginate={pagination} />
       </CContainer>
     </>
   )
@@ -30,6 +30,11 @@ PokeGrid.propTypes = {
       redirect: PropTypes.string,
     })
   ).isRequired,
+  paginate: PropTypes.shape({
+    next: PropTypes.string,
+    previous: PropTypes.string,
+  }).isRequired,
+  pagination: PropTypes.func.isRequired,
 }
 
 export default PokeGrid
