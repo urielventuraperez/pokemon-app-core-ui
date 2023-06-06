@@ -1,8 +1,8 @@
 export const pokemonsFormat = (pokemonsList) =>
-  pokemonsList.map((pokemon) => {
+  pokemonsList.map((pokemon, index) => {
     let formatData = {}
-    formatData.id = pokemon.id
+    formatData.id = index
     formatData.name = pokemon.name
-    formatData.image = `${process.env.REACT_APP_POKEPHOTOS}/${pokemon.id}+1`
+    formatData.image = `${process.env.REACT_APP_POKEPHOTOS}${index + 1}.svg`
     return formatData
   })

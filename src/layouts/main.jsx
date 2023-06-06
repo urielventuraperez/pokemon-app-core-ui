@@ -18,8 +18,12 @@ const MainLayout = ({children}) => {
   )
 }
 
+MainLayout.defaultProps = {
+  child: null,
+}
+
 MainLayout.propTypes = {
-  child: PropTypes.element.isRequired,
+  child: PropTypes.element,
 }
 
 export default MainLayout

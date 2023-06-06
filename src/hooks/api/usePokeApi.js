@@ -13,7 +13,7 @@ function usePokeApi() {
     setError("")
 
     fetch(
-      `${process.env.REACT_APP_POKEAPI}/pokemon?limit=${limit}&offset=${offset}`,
+      `${process.env.REACT_APP_POKEAPI}pokemon?limit=${limit}&offset=${offset}`,
       {
         method: "GET",
       }
