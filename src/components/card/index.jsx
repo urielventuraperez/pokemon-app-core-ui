@@ -1,5 +1,6 @@
 import React from "react"
 import {PropTypes} from "prop-types"
+import {useNavigate} from "react-router-dom"
 import {
   CCard,
   CCol,
@@ -13,6 +14,8 @@ import {
 } from "@coreui/react"
 
 const Card = ({data}) => {
+  const navigate = useNavigate()
+
   return (
     <CCard className="mb-3 border border-dark-subtle">
       <CRow className="g-0">
@@ -30,10 +33,16 @@ const Card = ({data}) => {
         </CCol>
         <CCol md={8}>
           <CCardBody>
-            <CCardTitle class="text-capitalize">{data.name}</CCardTitle>
+            <CCardTitle className="text-capitalize">{data.name}</CCardTitle>
             <CCardSubtitle className="mb-2 text-body-tertiary">{`Pokedex number: ${data.id}`}</CCardSubtitle>
             <CCardText>
-              <CButton color="primary">View Pokemon</CButton>
+              <CButton
+                color="primary"
+                className="btn-sm"
+                onClick={() => navigate(`pokemon/${data.id}`)}
+              >
+                View Pokemon
+              </CButton>
             </CCardText>
           </CCardBody>
         </CCol>

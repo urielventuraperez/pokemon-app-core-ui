@@ -7,7 +7,7 @@ const Header = () => {
     <header>
       <CNavbar colorScheme="light" className="bg-primary">
         <CContainer fluid>
-          <CNavbarBrand href="#">
+          <CNavbarBrand>
             <img src={Pokeball_logo} alt="Poketest" width="70" height="70" />
             <span className="text-light">Poketest</span>
           </CNavbarBrand>

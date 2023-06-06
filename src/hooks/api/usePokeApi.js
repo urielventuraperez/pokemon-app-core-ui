@@ -38,6 +38,28 @@ function usePokeApi() {
       })
   }, [])
 
+  const fetchPokemon = useCallback((id) => {
+    setLoading(true)
+    setLoaded(false)
+    setError("")
+
+    fetch(`${process.env.REACT_APP_POKEAPI}pokemon/${id}`, {
+      method: "GET",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setPokemon(data)
+        setLoaded(true)
+        setLoading(false)
+      })
+      .catch((err) => {
+        // eslint-disable-next-line no-console
+        console.error(err)
+        setLoading(false)
+        setError("Failed to fetch info about the pokemon, try later...")
+      })
+  }, [])
+
   return {
     loading,
     loaded,
@@ -45,6 +67,7 @@ function usePokeApi() {
     pokemon,
     paginate,
     fetchPokemons,
+    fetchPokemon,
   }
 }
 

@@ -10,7 +10,7 @@ const PokeGrid = ({data, paginate, pagination}) => {
       <CContainer>
         <CRow>
           {data.map((item) => (
-            <CCol key={item.id} xs={4}>
+            <CCol key={item.id} md={4} sm={12}>
               <Card data={item} />
             </CCol>
           ))}
