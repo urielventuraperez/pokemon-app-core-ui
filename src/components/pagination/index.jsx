@@ -1,6 +1,6 @@
 import React from "react"
 import {PropTypes} from "prop-types"
-import {CPagination, CPaginationItem} from "@coreui/react"
+import {CButton, CPagination, CPaginationItem} from "@coreui/react"
 import {pokemonModePagination} from "../../utils/pokemon"
 
 const Pagination = ({paginate, onClickPaginate}) => {
@@ -8,12 +8,14 @@ const Pagination = ({paginate, onClickPaginate}) => {
     <div>
       <CPagination align="center" aria-label="Page navigation example">
         <CPaginationItem
+          component={CButton}
           onClick={() => onClickPaginate(pokemonModePagination.PREVIOUS)}
           disabled={paginate.previous === null}
         >
           Previous
         </CPaginationItem>
         <CPaginationItem
+          component={CButton}
           disabled={paginate.next === null}
           onClick={() => onClickPaginate(pokemonModePagination.NEXT)}
         >

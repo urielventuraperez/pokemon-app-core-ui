@@ -5,11 +5,11 @@ import Pokeball_logo from "../assets/pokeball_icon.png"
 const Header = () => {
   return (
     <header>
-      <CNavbar colorScheme="light" className="bg-light">
+      <CNavbar colorScheme="light" className="bg-primary">
         <CContainer fluid>
           <CNavbarBrand href="#">
             <img src={Pokeball_logo} alt="Poketest" width="70" height="70" />
-            Poketest
+            <span className="text-light">Poketest</span>
           </CNavbarBrand>
         </CContainer>
       </CNavbar>

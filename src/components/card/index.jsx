@@ -3,25 +3,37 @@ import {PropTypes} from "prop-types"
 import {
   CCard,
   CCol,
-  CCardImage,
   CCardText,
   CCardTitle,
+  CCardSubtitle,
   CCardBody,
   CRow,
+  CAvatar,
+  CButton,
 } from "@coreui/react"
 
 const Card = ({data}) => {
   return (
-    <CCard className="mb-3">
+    <CCard className="mb-3 border border-dark-subtle">
       <CRow className="g-0">
-        <CCol md={4}>
-          <CCardImage src={data.image} />
+        <CCol
+          style={{display: "flex", alignItems: "center", justifyContent: "center"}}
+          md={4}
+        >
+          {data.image ? (
+            <CAvatar src={data.image} size="lg" />
+          ) : (
+            <CAvatar color="primary" textColor="white">
+              {data?.name.charAt(0).toUpperCase()}
+            </CAvatar>
+          )}
         </CCol>
         <CCol md={8}>
           <CCardBody>
-            <CCardTitle>{data.name}</CCardTitle>
+            <CCardTitle class="text-capitalize">{data.name}</CCardTitle>
+            <CCardSubtitle className="mb-2 text-body-tertiary">{`Pokedex number: ${data.id}`}</CCardSubtitle>
             <CCardText>
-              <small className="text-medium-emphasis">View Pokemon</small>
+              <CButton color="primary">View Pokemon</CButton>
             </CCardText>
           </CCardBody>
         </CCol>
