@@ -7,11 +7,11 @@ import Footer from "./footer"
 const MainLayout = ({children}) => {
   return (
     <div>
-      <CContainer fluid>
+      <CContainer fluid style={{padding: 0}}>
         <Header />
       </CContainer>
-      <CContainer>{children}</CContainer>
-      <CContainer fluid>
+      <CContainer style={{marginTop: 40, marginBottom: 40}}>{children}</CContainer>
+      <CContainer fluid style={{padding: 0}}>
         <Footer />
       </CContainer>
     </div>
