@@ -39,3 +39,8 @@ After init project, we need create and .env file into root directory.
 - Pokemons list
 - Pagination
 - Pokemon detail
+
+## Screenshots
+![image](https://github.com/urielventuraperez/pokemon-app-core-ui/assets/52002573/08b657f6-56eb-4729-a2ab-e61a2e67c560)
+
+![image](https://github.com/urielventuraperez/pokemon-app-core-ui/assets/52002573/ab74f9df-3930-4526-8b84-b84ee0770c29)
