@@ -26,12 +26,12 @@ Start the server
   yarn start
 ```
 
-### After init project, we need create and .env file into root directory.
-
 ## Env Values
 
-### `REACT_APP_POKEAPI=https://pokeapi.co/api/v2/`
-### `REACT_APP_POKEPHOTOS=https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/`
+After init project, we need create and .env file into root directory.
+
+`REACT_APP_POKEAPI=https://pokeapi.co/api/v2/`
+`REACT_APP_POKEPHOTOS=https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/`
 
 ## Features
 
